@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surya Financial</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .navbar-brand, footer.color { color: white; }
+
+  nav a.color { color: white; }
+
+  nav,footer { background-color: #2F3752; }
+
+  a.bg { background-color: #2F3752; color: aliceblue; }
+
+  a.bg:hover,a.bg:active,a.bg:focus {
+     background-color: #2F3752; 
+    }
+
+  a.btn:hover,a.btn:active,a.btn:focus { background-color: #2F3752; }
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light px-3 bg py-3">
+    <a class="navbar-brand" href="./trade.html">📊 Surya Financial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link color" href="./trade.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link color" href="./Market Analysis.html">Analysis</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="btn btn-dark btn-sm">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <div class="text-center mb-2 mt-2">
+    <h2>What We Provide</h2>
+    <p>Actively traded index options</p>
+  </div>
+
+  <!-- Cards Section -->
+  <section class="container my-5">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h4>📈 Market Analysis</h4>
+          <p>Daily Analysis On Nifty, BankNifty, and Options charts And Index.</p>
+          <a href="./Advanced Market Analysis .html" class="btn bg">More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h4>🛠 Strategies</h4>
+          <p>Custom trading strategies for intraday & swing trading.</p>
+          <a href="./Strategies.html" class="btn bg">More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h4>💡 Consultancy</h4>
+          <p>1-on-1 mentoring and professional portfolio guidance.</p>
+          <a href="./consulting.html" class="btn bg">More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 About Us -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <p class="text-center">
+      At <b>Surya Financial</b>, we are passionate about empowering traders and investors 
+      with the right tools, strategies, and guidance. With years of experience in financial markets, 
+      we provide actionable insights, customized strategies, and personalized mentorship to help 
+      you achieve your trading goals.
+    </p>
+  </section>
+
+  <!-- 🔹 Why Choose Us -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <div class="row text-center">
+      <div class="col-md-4"><h5>✅ Expert Insights</h5><p>Daily reports backed with technical & fundamental analysis.</p></div>
+      <div class="col-md-4"><h5>✅ Risk Management</h5><p>Strategies focused on preserving capital and maximizing profit.</p></div>
+      <div class="col-md-4"><h5>✅ Mentorship</h5><p>1-on-1 guidance for beginners and advanced traders.</p></div>
+    </div>
+  </section>
+
+  <!-- 🔹 Testimonials -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">What Our Clients Say</h2>
+    <div class="row text-center">
+      <div class="col-md-4"><div class="card p-3"><p>"The analysis helped me trade confidently. Highly recommended!"</p><h6>- Rohan P.</h6></div></div>
+      <div class="col-md-4"><div class="card p-3"><p>"Best strategies for intraday trading, saved me from huge losses."</p><h6>- Priya S.</h6></div></div>
+      <div class="col-md-4"><div class="card p-3"><p>"Mentorship sessions were game-changing for my trading journey."</p><h6>- Amit K.</h6></div></div>
+    </div>
+  </section>
+
+  <!-- 🔹 FAQs -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">FAQs</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How do I start trading?</button></h2>
+        <div id="faq1" class="accordion-collapse collapse"><div class="accordion-body">We guide beginners with account setup, basics of market analysis, and demo practice.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Do you provide live signals?</button></h2>
+        <div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">We provide market levels and insights. Decisions are left to traders for learning purposes.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Is this suitable for beginners?</button></h2>
+        <div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">Yes, our mentorship starts from basics and gradually moves towards advanced strategies.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-3 color">
+    <p>© 2025 Trading Consultant | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

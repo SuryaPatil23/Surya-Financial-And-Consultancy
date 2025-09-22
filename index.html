@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Consultant & Trading Analysis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .navbar-brand,
+    footer.color {
+      color: white;
+    }
+
+    nav a.color {
+      color: white;
+    }
+
+    body.dark-mode .card {
+      background-color: dimgray;
+      color: whitesmoke;
+      border: 1px solid gray;
+    }
+
+    body.dark-mode .navbar .nav-link {
+      color: lightgray !important;
+    }
+
+    body.dark-mode thead {
+      color: white;
+
+    }
+
+    body.dark-mode tbody tr {
+      background-color: black;
+    }
+
+    /* by defoult */
+    nav,
+    footer,
+    header.bg {
+      background-color: #2F3752;
+    }
+
+    a.bg {
+      background-color: #2F3752;
+    }
+
+    /* Navbar */
+    body.dark-mode .navbar {
+      background-color: darkslategray !important;
+    }
+
+    /* Footer */
+    body.dark-mode footer {
+      background-color: darkslategray !important;
+      color: lightgray;
+    }
+
+    /* For header */
+    body.dark-mode header {
+      background-color: darkslategray !important;
+      color: lightgray;
+    }
+
+    /* Dark Mode Button */
+    #darkModeBtn {
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+
+    body.dark-mode #darkModeBtn {
+      background-color: whitesmoke;
+      color: black;
+    }
+
+    body.dark-mode a.bg {
+      background-color: darkslategray !important;
+      color: lightgray;
+    }
+
+
+    a.btn.bg {
+      background-color: #2F3752;
+      color: white;
+
+      transition: 0.3s ease;
+    }
+
+
+    a.btn.bg:hover,
+    a.btn.bg:focus {
+      background-color: #2F3752;
+      color: white;
+
+    }
+
+
+    a.btn.bg:active {
+      background-color: #2F3752;
+      color: white;
+    }
+
+    .custom-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #2F3752;
+      color: white;
+      padding: 10px;
+    }
+
+    body.dark-mode .custom-marquee {
+      background-color: darkslategray !important;
+      color: lightgray;
+    }
+
+    body.dark-mode .tablele {
+      background-color: darkslategray !important;
+    }
+
+    .tablele {
+      background-color: #2F3752 !important;
+    }
+
+    th {
+      color: white;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+
+    .custom-marquee span {
+      display: inline-block;
+      margin-right: 50px;
+      font-weight: bold;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: fill;
+      width: 100%;
+    }
+
+    .card-img-top1 {
+      height: 200px;
+      object-fit: scale-down;
+    }
+
+    .carousel-item img.stock {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+
+    }
+
+    .carousel-caption {
+
+      padding: 10px;
+      text-align: center;
+      position: absolute;
+      bottom: 3;
+      left: 0;
+      right: 0;
+    }
+
+    #contact-us{
+      scroll-behavior: smooth;
+    }
+    #get{
+      scroll-behavior: smooth;
+    }
+    .link{
+text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light px-3 bg ">
+    <a class="navbar-brand" href="./trade.html">📊 Surya Financial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link color" href="./trade.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link color" href="./Market Analysis.html">Analysis</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="btn btn-dark btn-sm">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <section class="custom-marquee">
+    <div class="marquee-content">
+      <span>Nifty 50: 25106.75 &nbsp<span class="red">-7.25 (-0.03%)</span></span>
+      <span>Nifty 500: 23224.4 &nbsp<span class="green">+34.15 (0.15%)</span></span>
+      <span>Bank Nifty: 54890.65 &nbsp<span class="green">+81.35 (0.15%)</span></span>
+      <span>Nifty IT: 35876.5&nbsp<span class="red"> -234.25 (-0.65%)</span></span>
+      <span>Nifty Midcap 50: 16476.7 &nbsp<span class="green">+46.65 (0.28%)</span></span>
+    </div>
+  </section>
+  <header class="bg text-white text-center py-5 ">
+    <h1>Index & Options Trading Analysis</h1>
+    <p>Expert Financial Consulting for Smarter Investments</p>
+  </header>
+
+  <section class="container my-5">
+
+    <div class="row g-4 mb-4" id="Get">
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="./images/NiftyBank.avif" class="card-img-top" alt="Bank-Nifty">
+          <div class="card-body">
+            <p>Financial advice on <i class="fa-solid fa-chart-line"></i></p>
+            <h5 class="card-title">Bank-nifty</h5>
+            <p class="card-text">Advising on Bank-nifty index and all Bank-nifty stocks</p>
+            <a href="./checkout.html?course=bank-nifty&price=30000&Discountprice=14999" class="btn bg">Get</a>
+            <a href="./leranmore.html" class="btn bg">learn More</a>
+            <p class="mt-2"><b>Rs <strike>30000</strike> 14999</b></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center">
+          <img src="./images/Nifty-50.png" class="card-img-top" alt="Nifty-50">
+          <div class="card-body">
+            <p>Financial advice on <i class="fa-solid fa-chart-line"></i></p>
+            <h5 class="card-title">Nifty-50</h5>
+            <p class="card-text">Advising on Nifty-50 index and all Nifty stocks</p>
+            <a href="./checkout.html?course=Nifty-50&price=30000&Discountprice=14999" class="btn bg">Get</a>
+            <a href="./leranmore.html" class="btn bg">learn More</a>
+            <p class="mt-2"><b>Rs <strike>30000</strike> 14999</b></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center ">
+          <img src="./images/finnifty.png" class="card-img-top1" alt="Fin-Nifty">
+          <div class="card-body">
+            <p>Financial advice on <i class="fa-solid fa-chart-line"></i></p>
+            <h5 class="card-title">Fin-nifty</h5>
+            <p class="card-text">Advising on Financial-nifty index and all midcap stocks</p>
+            <a href="./checkout.html?course=Fin-nifty&price=20000&Discountprice=9999" class="btn bg">Get</a>
+            <a href="./leranmore.html" class="btn bg">learn More</a>
+            <p class="mt-2"><b>Rs <strike>20000</strike> 9999</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 text-center  ">
+        <div class="card">
+          <img src="./images/Nifty-50.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <p>Financial advaice on </p>
+            <h5>Midcap Nifty</h5>
+            <p>Advising on Financial-nifty index and all midcap stocks</p>
+            <a href="./leranmore.html" class="btn bg">learn More</a>
+            <a href="./checkout.html?course=bank-nifty&price=30000&Discountprice=14999" class="btn bg">Get</a>
+            <p class="mt-2"><b>Rs <strike>20000</strike> 9999</b></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="mainCarousel" class="carousel slide mb-2" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/our team.avif" class="d-block w-100 stock" alt="Team">
+        <a href="./images/our team.avif" class=""></a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Our Team</h5>
+          <p>Our team are available to support</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/Investments-Stock-market-basics_9-tips-for-beginners.webp" class="d-block w-100 stock"
+          alt="India Stocks">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Indian Stocks</h5>
+          <p>All types of investing in India</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/portfolio.jpg" class="d-block w-100 mt-20 stock" alt="Trading">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Trading Advice</h5>
+          <p>Expert strategies to grow your portfolio</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+
+  <!-- Table Section -->
+  <section class="container my-3 mb-2">
+    <h2 class="text-center mb-4">Todays Index Report</h2>
+    <table class="table table-bordered text-center">
+      <thead class="table-secondary">
+        <tr>
+          <th class="tablele" style="color: lightgray">Index</th>
+          <th style="background-color: green; color: lightgray;">Support</th>
+          <th style="background-color: red; color:lightgray;">Resistance</th>
+          <th class="tablele" style="color: lightgray">Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nifty</td>
+          <td>24,200</td>
+          <td>24,500</td>
+          <td>Bullish</td>
+        </tr>
+        <tr>
+          <td>BankNifty</td>
+          <td>50,000</td>
+          <td>50,600</td>
+          <td>Range Bound</td>
+        </tr>
+        <tr>
+          <td>FinNifty</td>
+          <td>22,000</td>
+          <td>22,300</td>
+          <td>Bearish</td>
+        </tr>
+        <tr>
+          <td>Midcap</td>
+          <td>16,400</td>
+          <td>16,600</td>
+          <td>Bullish</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="container-fluid ">
+    <div class="row bg-light rounded shadow ">
+      <h2 class="mt-4 text-center" id="contact-us">🚀 Get Connect With Us!</h2>
+       <div class="col-md-6 p-5 text-center">
+
+      <p class="text-muted">
+        Welcome to <strong>Surya Financial</strong>, where smart trading meets data-driven strategies.  
+        We are passionate about helping traders of all levels navigate the market with confidence.
+      </p>
+
+      <p class="mb-4">
+        Whether you’re just starting out or are already an experienced trader, we share the latest insights, market analysis, and actionable strategies to help you grow your portfolio.  
+        Join our community and stay ahead in the fast-paced world of trading!
+      </p>
+
+      <h5 class="mb-3">📍 Find Us On These Platforms:</h5>
+
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item">
+          🌐 Website: 
+          <a href="https://www.yourtradingproject.com" target="_blank" class="link">www.SuryaFinancial.com</a>
+        </li>
+
+        <li class="list-group-item">
+          📸 Instagram: 
+          <a href="https://www.instagram.com/yourtradingprofile" target="_blank" class="link">@surya._patil</a>
+        </li>
+
+        <li class="list-group-item">
+          ▶️ YouTube: 
+          <a href="https://youtube.com/yourtradingchannel" target="_blank" class="link">Surya_finacial</a>
+        </li>
+
+        <li class="list-group-item">
+          📧 Email: 
+          <a href="mailto:support@yourtradingproject.com" class="link">suryakantpatil110@gmail.com</a>
+        </li>
+
+        <li class="list-group-item">
+          📞 Phone: +91 72495 77434
+        </li>
+
+        <li class="list-group-item">
+          💬 Telegram: 
+          <a href="https://t.me/yourtradingchannel" target="_blank" class="link">@suryapatil23</a>
+        </li>
+      </ul>
+
+      <p class="text-muted">
+        Join thousands of traders who trust us to guide them through every market condition.  
+        Let’s make smarter decisions, together!
+      </p>
+
+    </div>
+      <div class="col-md-6 mt-5">
+        <form >
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+          </div>
+
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success" onclick="Submitt()">Submit</button>
+        </form>
+      </div>
+  </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg color">
+    <p>© 2025 Trading Consultant | All Rights Reserved</p>
+  </footer>
+  <script>
+
+    $("#darkModeBtn").click(function () {
+      $("body").toggleClass("dark-mode");
+
+      if ($("body").hasClass("dark-mode")) {
+        $(this).text("☀️ Light Mode");
+
+      } else {
+        $(this).text("🌙 Dark Mode");
+      }
+    });
+
+    function Submitt()
+    {
+      alert("Thank You to reach out us. Our team will connect you!")
+    }
+  </script>
+</body>
+
+</html>

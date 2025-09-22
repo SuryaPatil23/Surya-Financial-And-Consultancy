@@ -1,0 +1,48 @@
+    /* body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    body.dark-mode .card {
+      background-color: dimgray;
+      color: whitesmoke;
+      border: 1px solid gray;
+    }
+
+   
+    body.dark-mode .navbar {
+      background-color: darkslategray !important;
+    }
+    body.dark-mode .navbar .nav-link {
+      color: lightgray !important;
+    }
+
+    
+    body.dark-mode table {
+      color: whitesmoke;
+      background-color: dimgray;
+    }
+    body.dark-mode thead {
+      background-color: darkgray !important;
+    }
+    body.dark-mode tbody tr {
+      background-color: black;
+    }
+
+    body.dark-mode footer {
+      background-color: darkslategray !important;
+      color: lightgray;
+    }
+
+    #darkModeBtn {
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+    body.dark-mode #darkModeBtn {
+      background-color: whitesmoke;
+      color: black;
+    }
+    header.bg{
+      background-color: #2F4F4F;
+    }
+  */

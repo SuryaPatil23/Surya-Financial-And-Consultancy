@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror Market Concept (MMC) | Surya Financial</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="./css/trade.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    nav,
+    footer {
+      background-color: #2F3752;
+      color: white;
+    }
+
+    nav a,
+    footer,
+    footer a {
+      color: white;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .section-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode .section-card {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+    }
+
+    .btn {
+      background-color: #2F3752;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    .darkbuttn {
+      background-color: black;
+    }
+
+    .bg {
+      background-color: #2F3752;
+      color: white;
+    }
+    .ch
+    {
+      height: 35vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-3">
+    <a class="navbar-brand" href="./trade.html">📊 Surya Financial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./trade.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./strategies.html">Strategies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="btn btn-dark btn-sm ms-2 darkbuttn">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="container-fluid text-center bg py-3">
+    <h2>Mirror Market Concept (MMC)</h2>
+    <p>Advanced Market Analysis • Trend Identification • Liquidity Insights</p>
+  </section>
+
+  <!-- MMC Content -->
+  <section class="container my-5">
+    <div class="section-card">
+      <h3>🔎 What is MMC?</h3>
+      <p>
+        The <b>Mirror Market Concept (MMC)</b> focuses on analyzing how market movements often create 
+        reflective patterns. It helps traders identify <b>advanced trends, liquidity zones, and 
+        precise entry/exit points</b> by mirroring past price actions.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <h3>📌 Core Principles</h3>
+      <ul>
+        <li><b>Advanced Market Analysis:</b> Going beyond basics with deeper technical study.</li>
+        <li><b>Trend Identification:</b> Spot clear bullish/bearish phases early.</li>
+        <li><b>Liquidity Insights:</b> Recognize liquidity pools & traps.</li>
+        <li><b>Strategic Entries & Exits:</b> Time trades with higher accuracy.</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h3>🎯 Why Use MMC?</h3>
+      <p>
+        ✅ Provides <b>clarity in volatile markets</b> <br>
+        ✅ Helps avoid <b>false breakouts</b> <br>
+        ✅ Improves accuracy for both intraday & swing traders <br>
+        ✅ Works as a <b>scalable framework</b> for professionals
+      </p>
+    </div>
+
+    <div class="section-card gap-3">
+      <h3>📈 Example</h3>
+      <p>
+        Suppose the market makes a strong bullish move, then sweeps liquidity and reverses. 
+        MMC traders see this as a "mirror" reflection — expecting the next move to mirror 
+        the previous leg. Entry is made after liquidity sweep confirmation, stop-loss beyond 
+        liquidity zone, and targets set using mirrored projections.
+      </p>
+      <h3 class="text-center"> MMC's Pennant</h3>
+      <img src="./images/peenant patter.jpg" alt="peenant" class="img-fluid  ch gap-3">
+      <img src="./images/pennant example.jpg" alt="pennant" class="img-fluid py-3 ch ">
+      <div>
+        <h3 class="text-center">MMC's Rat-Trap</h3>
+        <img src="./images/Rat Trap.jpg" alt="" class="img-fluid ch">
+        <img src="./images/Rat Trapexample.jpg" alt="" class="img-fluid ch">
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container text-center my-5">
+    <h3>🚀 Want to Master MMC?</h3>
+    <p>Join our mentorship program and learn MMC with live examples & portfolio guidance.</p>
+    <a href="./trade.html#Get" class="btn btn-lg">Get Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 mt-5">
+    <p>© 2025 Surya Financial | Mirror Market Concept (MMC)</p>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    const btn = document.getElementById("darkModeBtn");
+    btn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📊 Advanced Market Analysis </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+     
+      background-color: #fafafa;
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    .market-summary,
+    .daily-analysis,
+    .key-levels,
+    .market-sentiment
+     {
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    } */
+
+  
+    .btn {
+      background-color: #2F3752;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.btn:hover,
+    a.btn:focus{
+      background-color: #2F3752 !important;
+      color: white !important;
+      
+    }
+    a.btn:active {
+      background-color: #2F3752 !important;
+      color: white !important;
+      
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+     body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .navbar-brand,
+    footer.color {
+      color: white;
+    }
+
+    nav a.color {
+      color: white;
+    }
+    nav,footer{
+        background-color: #2F3752;
+    }
+    .bg{
+        background-color: #2F3752;
+        color: aliceblue;
+    }
+    .bg:hover,
+    .bg:focus{
+        background-color: #2F3752;
+        color: aliceblue;
+    }
+     .bg:active{
+        background-color: #2F3752;
+        color: aliceblue;
+     }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light px-3 bg ">
+    <a class="navbar-brand" href="./trade.html">📊 Surya Financial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link color" href="./trade.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link color" href="./Market Analysis.html">Analysis</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link color" href="#">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="btn btn-dark btn-sm">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <h1>📊 Advanced Market Analysis</h1>
+  <p>Latest expert insights and market summary for Nifty, BankNifty, Options, and Sensex</p>
+
+  <!-- Market Summary -->
+  <div class="market-summary">
+    <table class="table table-bordered text-center">
+   <thead><h2>🔔 Market Summary</h2>
+    <tr>
+      <th><strong>Index</strong></th>
+      <th><strong>Current Value</strong></th>
+    </tr>
+    <tr>
+      <td>Nifty </td>
+      <td>24376</td>
+    </tr>
+
+    <tr>
+      <td>BankNifty</td>
+      <td> 55378</td>
+    </tr>
+
+    <tr>
+      <td>Midcap-nifty</td>
+      <td>13113</td>
+    </tr>
+
+    <tr>
+      <td>Sensex</td>
+      <td>82450</td>
+    </tr>
+   
+    </thead>
+    </table>
+
+    <h4 class="text-center"><p><strong>Market Status:</strong>Sideways with Bullish✅</p></h4>
+  </div>
+
+
+  <table class="table table-bordered text-center">
+    <thead><h2 class="py-3">⚡ Key Levels to Watch</h2>
+      <tr>
+        <th style="background-color: lightgray;">Index</th>
+        <th style="background-color: rgb(55, 118, 55);">Support</th>
+        <th style="background-color: rgb(181, 49, 49);">Resistance</th>
+      </tr>
+
+      <tr>
+        <td>Nifty</td>
+        <td>24300</td>
+        <td>24675</td>
+      </tr>
+      <tr>
+        <td>Bank-Nifty</td>
+        <td>55345</td>
+        <td>55700</td>
+      </tr>
+      <tr>
+        <td>Midcap-nifty</td>
+        <td>13100</td>
+        <td>13454</td>
+      </tr>
+      <tr>
+        <td>Fin-Nifty</td>
+        <td>26500</td>
+        <td>26700</td>
+      </tr>
+    </thead>
+  </table>
+
+  <table class="table table-bordered text-center">
+    <thead class="table-secondary">
+      <h2 class="py-3">📊 Market Sentiment</h2>
+      <tr>
+        <th>Index</th>
+        <th>Sentiment</th>
+
+      <tr>
+        <td>Nifty</td>
+        <td>Bullish ✅</td>
+      </tr>
+
+      <tr>
+        <td> Bank-Nifty</td>
+        <td>Neutral ➖</td>
+      </tr>
+      <tr>
+        <td>Fin-Nifty</td>
+        <td>Bullish✅ </td>
+      </tr>
+      <tr>
+        <td>Midcap-nifty</td>
+        <td>Sideways</td>
+      </tr>
+      </tr>
+    </thead>
+  </table>
+
+  <!-- Daily Market Insights -->
+  <div class="daily-analysis">
+    <h2>📈 Daily Market Insights</h2>
+
+    <h3>Nifty:</h3>
+    <p>Today Nifty is trying to hold support at 24300. A breakout above 24675 may lead to further bullish movement.
+      Overall sentiment is positive but watch intraday volatility.</p>
+
+    <h3>BankNifty:</h3>
+    <p>BankNifty struggling near 55345 - 55400. Strong resistance at 55700. Bearish crossover in short-term moving
+      averages
+      indicates possible pullback.</p>
+
+    <h3>Midcap-select :</h3>
+    <p>
+    <p>Today Nifty is trying to hold support at 13100. A breakout above 13400 may lead to further bullish movement.
+      Overall sentiment is positive but watch intraday volatility. SEBI says retail invester can avoid those indexes
+      while the end of trading month</p>
+    </p>
+
+    <h3>Sensex Overview:</h3>
+    <p>Sensex moving sideways near 82100 after a recent rally. Support zone at 82450 holding strong. Overall market
+      mood remains cautious. after all these volatility sensex shows the big downside raaly to toward the support from
+      the 82800 . SEBI says you should avois the trading in sensex while the market is volatil</p>
+
+    <h3>Options Market Insight:</h3>
+    <p>Highest Open Interest (OI) is seen at strikes: 18,000 PE and 18,500 CE. Watch for volatility between these
+      strikes. Traders prefer high OI strikes as support and resistance zones.</p>
+  </div>
+  <!-- Call To Action -->
+  <div class="cta text-center">
+    <h2>🔔 Want Expert Daily Market Alerts?</h2>
+    <p>Join our expert Courses for market updates, trading tips, and premium analysis.</p>
+    <p>Contact Us And mention your all dought. Our Team reach you ther</p>
+    <a href="trade.html#contact-us" class="btn">Contact Us Now</a>
+    <a href="trade.html#Get" class="btn ">Explore Our Course</a>
+  </div>
+
+ <footer class="text-center py-3 bg color mt-2">
+    <p>© 2025 Trading Consultant | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
